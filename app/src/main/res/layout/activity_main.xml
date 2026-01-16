@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--idea of hidden and show linear layout come from https://stackoverflow.com/questions/14313732/hide-and-show-linearlayout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EAF6"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_1"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/button_bg"
+            android:text="@string/button_add_text"
+            app:cornerRadius="0dp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/button_bg"
+            android:text="@string/button_delete_text"
+            app:cornerRadius="0dp"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_1"
+        app:layout_constraintVertical_bias="0.0">
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/add_city_to_list_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.613"
+            android:hint="@string/edit_text_hint"
+            android:inputType="text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="7dp"
+            android:layout_weight="0.387"
+            android:backgroundTint="@color/button_bg"
+            android:text="@string/confirm_button_text"
+            app:cornerRadius="0dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

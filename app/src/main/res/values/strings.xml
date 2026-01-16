@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ListyCity</string>
+    <string name="add_city_text">ADD CITY</string>
+    <string name="delete_city_text">DELETE CITY</string>
+    <string name="text_edit_placeholder">Enter City You Desire</string>
+    <string name="add">Add</string>
+    <string name="button_add_text">ADD CITY</string>
+    <string name="button_delete_text">DELETE CITY</string>
+    <string name="edit_text_hint">Enter The City You Want To Add</string>
+    <string name="confirm_button_text">Confirm</string>
+</resources>
